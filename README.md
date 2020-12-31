@@ -1,4 +1,5 @@
 # Snake-Game
+Build using Python
 ![game-image](/snake/snake_image.png)
 
 # To play the game
