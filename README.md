@@ -1,5 +1,5 @@
 # Snake-Game
-created using Python\
+Created using Python\
 \
 ![game-image](/snake/snake_image.png)
 
