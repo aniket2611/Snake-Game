@@ -11,7 +11,7 @@ def create():
         new_turtle = Turtle()
         new_turtle.penup()
         new_turtle.color("red", "white")
-        new_turtle.setx(x_cor)
+        new_turtle.goto(x_cor, 0)
         if i == 0:
             new_turtle.shape("circle")
             new_turtle.shapesize(stretch_wid=0.6, stretch_len=0.6)
@@ -28,6 +28,11 @@ class Snake:
     def __init__(self, border_half_height, border_half_width):
         self.max_x_cor = border_half_width - 5
         self.max_y_cor = border_half_height - 5
+        self.segments = create()
+
+    def reset(self):
+        for segment in self.segments:
+            segment.hideturtle()
         self.segments = create()
 
     def move(self):

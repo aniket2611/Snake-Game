@@ -32,7 +32,6 @@ screen.onkey(key="Down", fun=snake.move_down)
 screen.onkey(key="Left", fun=snake.move_left)
 screen.onkey(key="Right", fun=snake.move_right)
 
-
 # game on
 game_is_on = True
 while game_is_on:
@@ -49,12 +48,12 @@ while game_is_on:
     # wall collision
     if snake.is_collided_with_wall():
         score.game_over()
-        game_is_on = False
+        snake.reset()
 
     # tail collision
     for segment in snake.segments[1:]:
         if segment.distance(snake.segments[0]) < 5:
             score.game_over()
-            game_is_on = False
+            snake.reset()
 
 screen.exitonclick()
